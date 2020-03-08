@@ -1,0 +1,13 @@
+mat-card-title {
+    font-size: 20px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.discount {
+    color: #54BB3C;
+    font-size: 14px;
+}

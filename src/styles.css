@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
+* {
+    font-family: 'Montserrat', "Helvetica Neue", sans-serif;
+}
+
 html,
 body {
     height: 100%;
@@ -7,9 +11,31 @@ body {
 
 body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-family: 'Montserrat', "Helvetica Neue", sans-serif;
+    background-color: #ebebeb;
 }
 
 button {
     outline: none!important;
+}
+
+
+/* MAIN */
+
+.title {
+    font-size: 25px;
+    font-weight: lighter;
+    margin-bottom: 1.5rem!important;
+}
+
+
+/* Material */
+
+.mat-chip.mat-standard-chip {
+    background-color: #FFBE0D;
+    color: white;
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 10px 0 rgba(0, 0, 0, 0.15);
 }

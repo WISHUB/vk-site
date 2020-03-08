@@ -6,12 +6,12 @@
 
     <div class="collapse navbar-collapse" id="VK-navbarToggler">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-                <a class="nav-link" [routerLink]="['/inicio']" routerLinkActive="router-link-active">Inicio <span class="sr-only">(current)</span></a>
+            <li class="nav-item" *ngFor="let link of links; let i = index;" [ngClass]="{'active': i}">
+                <a class="nav-link" [routerLink]="['/' + link.url]" routerLinkActive="router-link-active">{{ link.name }}</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Buscar">
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar productos">
             <button mat-flat-button class="my-2 my-sm-0" type="submit">Buscar</button>
         </form>
     </div>
