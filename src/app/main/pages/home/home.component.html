@@ -1,7 +1,7 @@
 <app-nav-bar></app-nav-bar>
-<app-carousel [images]="images"></app-carousel>
+<app-carousel></app-carousel>
 <div class="container">
-    <div class="row mb-5">
+    <div class="row my-5">
 
         <!-- Lo más vendidos -->
         <div class="col-12 mt-4 mt-md-0">
@@ -10,12 +10,7 @@
         <app-small-card *ngFor="let card of mostSellersCards" [card]="card" class="col-6 col-md-4"></app-small-card>
         <!-- ./Lo más vendidos -->
 
-        <!-- Categorias más buscadas -->
-        <div class="col-12 mt-5">
-            <h1 class="title">Categorias más buscadas</h1>
-            <p>Próximamente...</p>
-        </div>
-        <!-- ./Categorias más buscadas -->
+        <app-payments-methods class="w-100 mt-5"></app-payments-methods>
 
         <div class="col-md-6 mt-5">
             <h1 class="title">Envios a toda <span class="font-weight-bold">CABA</span></h1>

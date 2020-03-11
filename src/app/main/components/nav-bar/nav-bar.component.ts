@@ -8,9 +8,20 @@ import { Component, OnInit, Input } from '@angular/core';
 export class NavBarComponent implements OnInit {
 
   @Input() links: any;
+  categorias: string[];
 
   constructor() {
     this.links = [];
+    this.categorias = [
+      'Respaldos (en todas sus medidas)',
+      'Tusor',
+      'Cuadros de Roma',
+      'Lisos',
+      'Capitoné',
+      'Berger',
+      'Chesterfield',
+      'Valhalla (con tachas)'
+    ];
   }
 
   ngOnInit(): void {

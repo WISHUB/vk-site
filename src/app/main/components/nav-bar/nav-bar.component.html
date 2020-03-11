@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" [routerLink]="['/inicio']">VK</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#VK-navbarToggler" aria-controls="VK-navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -9,10 +9,25 @@
             <li class="nav-item" *ngFor="let link of links; let i = index;" [ngClass]="{'active': i}">
                 <a class="nav-link" [routerLink]="['/' + link.url]" routerLinkActive="router-link-active">{{ link.name }}</a>
             </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="DropdownCategorias" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Categorias
+                </a>
+                <div class="dropdown-menu" aria-labelledby="DropdownCategorias">
+                    <a class="dropdown-item" *ngFor="let categoria of categorias.sort()" [routerLink]="['/categorias/' + categoria]">{{ categoria }}</a>
+                </div>
+            </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Buscar productos">
-            <button mat-flat-button class="my-2 my-sm-0" type="submit">Buscar</button>
-        </form>
+        <div class="ml-3">
+            <a href="https://www.instagram.com/mueblesvk" target="_blank" class="mx-2">
+                <img src="assets/images/instagram.svg" alt="Instagram" width="20">
+            </a>
+            <a href="https://www.facebook.com/verakrugdeco" target="_blank" class="mx-2">
+                <img src="assets/images/facebook.svg" alt="Facebook" width="20">
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=541138860680&text=Hola!%20Me%20interesan%20sus%20productos,%20me%20pueden%20contactar?" target="_blank" class="mx-2">
+                <img src="assets/images/whatsapp.svg" alt="Whatsapp" width="20">
+            </a>
+        </div>
     </div>
 </nav>

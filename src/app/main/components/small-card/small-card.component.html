@@ -1,10 +1,5 @@
 <mat-card class="p-4 mb-3 mb-md-0">
     <mat-card-header class="row d-none d-md-block">
-        <!-- <div class="col-12 d-flex justify-content-end">
-            <mat-chip-list>
-                <mat-chip *ngFor="let tag of card.tags">{{ tag }}</mat-chip>
-            </mat-chip-list>
-        </div> -->
         <div class="col-12">
             <mat-card-title>{{ card.title ? card.title : '' }}</mat-card-title>
         </div>
@@ -12,9 +7,9 @@
     <img mat-card-image [src]="card.src" [alt]="card.alt">
     <mat-card-content>
         <p class="m-0">
-            <span class="price">{{ card.price ? '$ ' + card.price : '' }}</span>
+            <span class="price">{{ card.price ? '$ ' + (card.price | number: '' : 'es-Ar') : '' }}</span>
             <span class="discount"> {{ card.discount }}% OFF</span>
         </p>
-        <p class="text-muted">{{ card.cuotes }} x {{ (card.price / card.cuotes).toFixed(2) }} Sin interés</p>
+        <p class="text-muted">{{ card.cuotes }} x {{ (card.price / card.cuotes).toFixed(2) | number: '' : 'es-Ar' }} Sin interés</p>
     </mat-card-content>
 </mat-card>
